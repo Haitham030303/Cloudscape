@@ -12,7 +12,7 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
-  --color-body-dark-background: #7b858b;
+  --color-body-dark-background: #b9c3cf;
   --color-body-darker: #5c5577;
   --color-border: #ccc;
 }
@@ -35,6 +35,7 @@ h2,
 h3 {
   color: var(--color-headings);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -51,6 +52,11 @@ h3 {
 
 p {
   margin-top: 0;
+}
+@media screen and (max-width: 340px) {
+  html {
+    font-size: 50%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -680,17 +686,24 @@ a {
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 6rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 6rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 70%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
 .container {
   margin: 0 auto;
   max-width: 1140px;
+}
+
+@media screen and (min-width: 768px) {
+  .block--skewed-left {
+    padding-bottom: calc(var(--padding-vertical) + 6rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 87%, 0% 100%);
+  }
 }
 
 /* Navigation Bar */
@@ -773,5 +786,28 @@ a {
 
   .nav.collapsible--expanded .nav__list {
     margin: 0;
+  }
+}
+
+/* Banner */
+
+.banner__tagline {
+  font-size: 2rem;
+  color: var(--color-body-dark-background);
+  letter-spacing: 2px;
+  margin: 2rem 0 4rem;
+}
+
+.banner__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    padding-top: 0;
+  }
+  .banner__content {
+    text-align: left;
+    align-self: center;
   }
 }

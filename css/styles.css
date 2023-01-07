@@ -164,6 +164,10 @@ a {
   font-weight: 500;
 }
 
+.list__empty {
+  list-style-image: none;
+}
+
 @media screen and (min-width: 1024px) {
   .list--tick .list__item {
     padding-left: 0.2rem;
@@ -231,6 +235,8 @@ a {
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+  transition: color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .btn .icon {
@@ -391,6 +397,9 @@ a {
 }
 
 /* Billing Plans */
+.billing-plan {
+  width: 100%;
+}
 
 .plan--popular .card__header {
   position: relative;
@@ -840,13 +849,13 @@ a {
 
 .block-domain__prices {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
   justify-items: center;
-  max-width: 75rem;
   margin: 0 auto;
+  max-width: 75rem;
 }
 
 /* TODO!!!!!!!!! */
@@ -860,9 +869,9 @@ a {
   }
 
   .block-domain .btn {
+    border-radius: 50%;
     overflow: hidden;
     padding: 1.5rem;
-    border-radius: 50%;
   }
 
   .block-domain .btn__search-text {
@@ -874,5 +883,35 @@ a {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     font-size: 1.5rem;
+  }
+}
+
+/* Plans */
+.plans.grid {
+  gap: 8rem 4rem;
+}
+
+.plans .billing-plan {
+  margin: 0 auto;
+  max-width: 500px;
+  transition: transform 0.3s ease-out;
+}
+
+.plans .billing-plan:first-child .list {
+  padding-bottom: 2.5rem;
+}
+
+.plans .billing-plan:hover {
+  /* transform: perspective(200px) translateZ(10px); */
+  transform: scale(1.05);
+}
+
+@media screen and (min-width: 1024px) {
+  .plans .plan--popular {
+    transform: scale(1.1);
+  }
+
+  .plans .plan--popular:hover {
+    transform: scale(1.15);
   }
 }

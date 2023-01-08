@@ -902,7 +902,6 @@ a {
 }
 
 .plans .billing-plan:hover {
-  /* transform: perspective(200px) translateZ(10px); */
   transform: scale(1.05);
 }
 
@@ -913,5 +912,40 @@ a {
 
   .plans .plan--popular:hover {
     transform: scale(1.15);
+  }
+}
+
+/* Features */
+.feature {
+  align-items: center;
+  gap: 5rem 3rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__description {
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .features__subtitle {
+    font-size: 2rem;
+  }
+
+  .feature {
+    align-items: flex-start;
   }
 }

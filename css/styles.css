@@ -373,7 +373,7 @@ a {
 
 .card {
   border-radius: 7px;
-  box-shadow: 0 0 20px 10px #f3f3f3;
+  box-shadow: 0 0 15px 10px #f3f3f3;
   overflow: hidden;
 }
 
@@ -590,6 +590,10 @@ a {
   right: -32px;
 }
 
+.testimonial .media {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
   .testimonial .quote,
   .testimonial .quote__author {
@@ -598,6 +602,7 @@ a {
 
   .testimonial .quote {
     margin-left: 6rem;
+    margin-bottom: 0;
   }
 }
 
@@ -978,5 +983,13 @@ a {
 
   .block-showcase__image {
     width: auto;
+  }
+}
+
+/* Testimonial Block */
+
+@media screen and (min-width: 768px) {
+  .block-testimonial .grid {
+    grid-template-columns: 40% 60%;
   }
 }

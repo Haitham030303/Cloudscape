@@ -870,7 +870,7 @@ a {
   max-width: 75rem;
 }
 
-/* TODO!!!!!!!!! */
+/* TODO: fix the layout issue for small screens */
 @media screen and (max-width: 550px) {
   .block-domain__prices {
     grid-template-columns: repeat(2, 1fr);
@@ -991,5 +991,109 @@ a {
 @media screen and (min-width: 768px) {
   .block-testimonial .grid {
     grid-template-columns: 40% 60%;
+  }
+}
+
+/* Footer */
+.footer {
+  background: #232323;
+}
+.footer .icon-container {
+  position: relative;
+  top: -1.2rem;
+}
+
+.footer__section {
+  padding-bottom: 1.5rem;
+  margin: 2rem 0;
+  border-bottom: 2px solid #393939;
+}
+
+.footer__section .list {
+  margin: 0;
+}
+
+.footer__section .list__item {
+  margin: 3rem 0;
+}
+
+.footer__heading {
+  color: white;
+}
+
+.footer a {
+  color: #888;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer__footer {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.footer__footer img {
+  /* TODO: Consider refactoring and applying to all images. */
+  width: 100%;
+  max-width: 28rem;
+}
+
+.footer__copyright {
+  font-size: 2.1rem;
+  color: white;
+  opacity: 0.4;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.5rem;
+  }
+  .footer__sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    justify-items: center;
+  }
+
+  .footer__section:first-of-type {
+    justify-self: flex-end;
+  }
+
+  .footer .collapsible__content {
+    max-height: 100%;
+    opacity: 1;
+  }
+  .footer .icon-container {
+    display: none;
+  }
+
+  .footer__heading {
+    font-size: 1.6rem;
+  }
+
+  .footer__section {
+    border: 0;
+  }
+
+  .footer__footer {
+    margin-top: 1rem;
+    order: -1;
+    position: relative;
+    left: -2rem;
+  }
+
+  .footer__copyright {
+    margin-top: 3.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer__footer {
+    grid-row: 2;
+    grid-column: 2 / span 2;
+    justify-self: center;
   }
 }

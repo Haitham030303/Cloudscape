@@ -862,7 +862,7 @@ a {
 
 @media screen and (min-width: 768px) {
   .banner {
-    padding-top: 0;
+    padding-top: 2rem;
   }
   .banner__content {
     text-align: left;
